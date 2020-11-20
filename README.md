@@ -89,3 +89,51 @@
   });
 </script>
 ```
+
+### Ouvindo eventos
+
+1. Aqui estamos usando um botão para ouvir o evento `onClick` pelo `v-on:click`.
+
+2. Quando esse evento acontecer, chamamos a função `invert`, pegamos a mensagem com `this.message` e a invertemos.
+
+```html
+<div id="app">
+  <p>{{ message }}</p>
+  <button v-on:click="invert">Inverter string</button>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      message: "Ola, mundo Vue",
+    },
+    methods: {
+      invert() {
+        this.message = this.message.split("").reverse().join("");
+      },
+    },
+  });
+</script>
+```
+
+### Escutando o valor de um elemento
+
+Com v-model conseguimos escutar o valor de `inputValue` e atualizar o que aparece na tela dentro da tag `p` automaticamente.
+
+```html
+...
+<div id="app">
+  <p>{{ inputValue }}</p>
+  <input v-model="inputValue" />
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      inputValue: "valor default",
+    },
+  });
+</script>
+```
