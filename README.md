@@ -1,4 +1,6 @@
-## Aprendendo VUE.js
+<img src="https://miro.medium.com/max/3840/0*V2joFeJ1WYYRl8tV.png"/>
+
+<h2 align="center">Aprendendo VUE.js</h2>
 
 ### Primeiros passos
 
@@ -24,5 +26,66 @@
       message: 'Ola, mundo Vue' + new Date().toLocaleString()
     }
   })
+</script>
+```
+
+### Usando diretivas
+
+#### Para mostrar uma mensagem em seguida de um hover
+
+```html
+...
+
+<div id="app" v-bind:title="message">
+  <p>Passe por aqui para ver a mensagem</p>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      message: "Ola, mundo Vue" + new Date().toLocaleString(),
+    },
+  });
+</script>
+```
+
+#### Usando if
+
+```html
+...
+
+<div id="app" v-if="see">
+  <p>Voce só pode ver isso se 'see' for true</p>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      see: true,
+    },
+  });
+</script>
+```
+
+#### Usando loops
+
+```html
+...
+
+<div id="app">
+  <ol>
+    <li v-for="item in items">{{ item.text }}</li>
+  </ol>
+</div>
+
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      items: [{ text: "primeiro" }, { text: "segundo" }, { text: "terceiro" }],
+    },
+  });
 </script>
 ```
