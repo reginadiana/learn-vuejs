@@ -137,3 +137,19 @@ Com v-model conseguimos escutar o valor de `inputValue` e atualizar o que aparec
   });
 </script>
 ```
+
+### Criando e executando a versão CLI do VUE
+
+Instale o VUE na sua máquina de acordo com a [documentação](https://cli.vuejs.org/guide/installation.html)
+
+Depois, crie o projeto com:
+
+```bash
+vue create <nome-do-projeto>
+```
+
+Em seguida, o VUE vai te perguntar algumas coisas para configurar e instalar as dependencias do projeto. Depois disso, entre na pasta e execute:
+
+```bash
+cd <nome-do-projeto> && yarn server
+```

@@ -2,8 +2,12 @@
 
 <div id="app">
   <p>{{ message }}</p>
-  <button v-on:click='invert'>Inverter string</button>
+  <button v-on:click="invert">Inverter string</button>
 </div>
+
+<!-- Também é possivel utilizar v-on abreviado 
+  <button @click="invert">Inverter string</button>
+-->
 
 <script>
   new Vue({
@@ -13,8 +17,8 @@
     },
     methods: {
       invert() {
-        this.message = this.message.split('').reverse().join('')
-      }
-    }
+        this.message = this.message.split("").reverse().join("");
+      },
+    },
   });
 </script>
