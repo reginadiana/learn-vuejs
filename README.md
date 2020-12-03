@@ -153,3 +153,16 @@ Em seguida, o VUE vai te perguntar algumas coisas para configurar e instalar as 
 ```bash
 cd <nome-do-projeto> && yarn server
 ```
+
+### Usando o onChange 
+
+```javascript
+<textarea v-model="comment" id="comment"/>
+    
+watch: {
+  // sempre que o comentário mudar, essa função será executada
+  comment: function () {
+    console.log(this.comment)
+  }
+},
+```
